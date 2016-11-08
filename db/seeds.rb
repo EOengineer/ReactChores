@@ -5,6 +5,20 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+weekdays =
+[
+  { name: "Sunday", position: 1 },
+  { name: "Monday", position: 2 },
+  { name: "Tuesday", position: 3 },
+  { name: "Wednesday", position: 4 },
+  { name: "Thursday", position: 5 },
+  { name: "Friday", position: 6 },
+  { name: "Saturday", position: 7 }
+]
+
+Weekday.create(weekdays)
+
+puts "You have created #{Weekday.count} Weekdays."
 
 chore_statuses =
 [
@@ -23,9 +37,9 @@ incomplete_status = ChoreStatus.find(2).id
 
 chores =
 [
-  { name: "dishes", description: "Wash and dry the dishes", chore_status_id: incomplete_status },
-  { name: "laundry", description: "Wash and dry a load of laundry", chore_status_id: incomplete_status },
-  { name: "floors", description: "vacuum and mop floors", chore_status_id: incomplete_status }
+  { name: "dishes", description: "Wash and dry the dishes" },
+  { name: "laundry", description: "Wash and dry a load of laundry" },
+  { name: "floors", description: "vacuum and mop floors" }
 ]
 
 Chore.create(chores)
